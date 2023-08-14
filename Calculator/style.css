@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+html{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh ;
+    margin: 0;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.calculator{
+    background: white;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow:  0 5px 30px -5px rgba(0, 0, 0, .9);
+}
+.calculator-display{
+    background: black;
+    color: white;
+    margin:0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+   
+
+}
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-size:46px  ;
+    font-family: 'Belanosima', sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+    scrollbar-highlight-color: white;
+
+}
+button{
+  min-height: 50px;
+  font-size: 30px;
+  border: none;
+  font-weight: 200;
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(199, 199, 199, 0.9);
+}
+button:hover{
+  filter: brightness(150%);
+}
+button:active{
+  transform: translateY(3px);
+}
+button:focus{
+  outline: none;
+}
+.operator{
+  background: blueviolet;
+  color: #f1f1f1;
+  font-size: 30px;
+}
+.operator:hover{
+  background: white;
+  color: blueviolet ;
+}
+.clear{
+  background: #0f0c29;
+  color: whitesmoke;
+}
+
+
+
+/* custome scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* buttons */
+  .calculator-button{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .equal-sign{
+    grid-column: -2;
+    grid-row: 2/ span 4 ;
+    background: rgb(76, 235, 76);
+    
+  }
+  .equal-sign:hover{
+    color: green;
+  }
+
+/* media query : for large phones */
+@media screen and (max-width:600px) {
+  .calculator{
+    width: 90%;
+  }
+}
